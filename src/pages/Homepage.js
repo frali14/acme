@@ -1,9 +1,11 @@
 import React from "react";
+import MC from "mousquetaires-composants"
 
 const Homepage = (props) => {
     const handleLogout = (e) => {
         e.preventDefault();
-        props.history.push('/logout')
+        localStorage.removeItem('slido-clone_auth')
+       // props.history.push('/logout')
     };
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,7 @@
 import axios from "axios";
 
+axios.defaults.baseURL = process.env.REACT_APP_URL
+
 const Get = ( url, defaultResponse) => {
     if (url) {
         return axios.get(url).then(res => res.data)
